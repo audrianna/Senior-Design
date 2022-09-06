@@ -7,12 +7,12 @@ This project is very beneficial for students, especially for freshmen, to keep t
 
 Preliminary Product Requirements -
 Functional Requirements -
-Keeping Track of Courses
-Task Master 
-Map of core classes
-Gpa calculator
+Keeping Track of Courses,
+Task Master, 
+Map of core classes,
+Gpa calculator,
 Course Description
 
 Non-Functional Requirements
-Advisor Login
-Rating of Courses 
+Advisor Login,
+Rating of Courses
