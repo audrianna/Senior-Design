@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+<head>
+
+    {% block content %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style type="text/css">
+        input[type="submit"]{
+            cursor:pointer;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+
+        .form-box {
+            width: 380px;
+            height: 15px;
+            position: relative;
+            margin: 5% auto;
+            background: yellow;
+            padding: 5px;
+
+        }
+
+        .button-box {
+            width: 220px
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 10px yellow;
+            border-radius: 30px;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+            top: -400px;
+            left: 250px;
+
+
+        }
+
+        #bbtn {
+            top:0;
+            left:0;
+            position: absolute;
+            width: 110px;
+            height: 100px;
+            bckground: liner-gradient(to right, #ff105f, #ffad06);
+            border-radius: 30px;
+            transition: .2s;
+
+        }
+
+        .input-group {
+            top: -200px;
+            left: 200px;
+            position: absolute;
+            width: 280px;
+            transaction: 5s;
+
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+<center>
+    <h3 class = "title">Register Here</h3>
+    <form action="{% url 'join' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><input class = "form-box" text" name="fname" placeholder="Enter first name Here"></td>
+                <td class = "card">:First Name</td>
+
+            </tr>
+            <tr>
+                <td><input class = "form-box"  type="text" name="lname" placeholder="Enter last name Here"></td>
+                <td class = "card" >:Last Name</td></tr>
+            <tr>
+
+                <td><input class = "form-box"   type="password" name="user_pass" placeholder="Enter Password Here"></td>
+                <td class = "card">:Password</td>
+            </tr>
+            <tr>
+
+                <td><input class = "form-box"  type="email" name="mail" placeholder="Enter Email Here"></td>
+                <td class = "card">:Email</td>
+            </tr>
+            <tr>
+
+                <td><input class = "form-box"  type="ID" name="banner" placeholder="Enter Banner ID Here"></td>
+                <td class = "card">:Banner ID</td>
+            </tr>
+            <tr>
+
+                <td>
+                    <input type="radio" name="classification"> Freshman
+                    <input type="radio" name="classification"> Sophmore
+                    <input type="radio" name="classification"> Junior
+                    <input type="radio" name="classification"> Senior
+                    <input type="radio" name="classification"> Supper Senior
+                </td>
+                <td class = "card">:Classification</td>
+            </tr>
+            <tr>
+
+                <td><p>Already a user? <a href="home">Login Here</a></p></td>
+                <td><input class = "button-box" type="submit" name="submit" value="submit"></td>
+            </tr>
+        </table>
+    </form>
+
+</center>
+</body>
+{% endblock %}
+</html>

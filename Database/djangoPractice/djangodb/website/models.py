@@ -4,8 +4,9 @@ from django.db import models
 class Student(models.Model):
  fname = models.CharField(max_length = 50)
  lname = models.CharField(max_length = 100)
- Email = models.EmailField(max_length = 100)
- Passwd = models.CharField(max_length = 50)
+ email = models.EmailField(max_length = 100)
+ passwd = models.CharField(max_length = 50)
+ banner = models.CharField(max_length = 50)
  classification = models.CharField(max_length = 50)
 
  def __self__(self):
