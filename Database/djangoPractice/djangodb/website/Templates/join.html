@@ -93,41 +93,30 @@
 <body>
 <center>
     <h3 class = "title">Register Here</h3>
-    <form action="{% url 'join' %}" method="POST">
+    <form method="POST" action="{% url 'join' %}" >
         {% csrf_token %}
         <table>
             <tr>
-                <td><input class = "form-box" text" name="fname" placeholder="Enter first name Here"></td>
+                <td><input type = 'text' class = "form-box"  name="fname" placeholder="Enter first name Here"></td>
                 <td class = "card">:First Name</td>
 
             </tr>
             <tr>
-                <td><input class = "form-box"  type="text" name="lname" placeholder="Enter last name Here"></td>
+                <td><input type = 'text' class = "form-box"  type="text" name="lname" placeholder="Enter last name Here"></td>
                 <td class = "card" >:Last Name</td></tr>
             <tr>
 
-                <td><input class = "form-box"   type="password" name="user_pass" placeholder="Enter Password Here"></td>
+                <td><input type = 'password' class = "form-box"   type="password" name="passwd" placeholder="Enter Password Here"></td>
                 <td class = "card">:Password</td>
             </tr>
             <tr>
 
-                <td><input class = "form-box"  type="email" name="mail" placeholder="Enter Email Here"></td>
+                <td><input type='text' class = "form-box"  type="email" name="email" placeholder="Enter Email Here"></td>
                 <td class = "card">:Email</td>
             </tr>
             <tr>
 
-                <td><input class = "form-box"  type="ID" name="banner" placeholder="Enter Banner ID Here"></td>
-                <td class = "card">:Banner ID</td>
-            </tr>
-            <tr>
-
-                <td>
-                    <input type="radio" name="classification"> Freshman
-                    <input type="radio" name="classification"> Sophmore
-                    <input type="radio" name="classification"> Junior
-                    <input type="radio" name="classification"> Senior
-                    <input type="radio" name="classification"> Supper Senior
-                </td>
+                <td><input type = 'text' class = "form-box"  type="ID" name="classification" placeholder="Enter Classification Here"></td>
                 <td class = "card">:Classification</td>
             </tr>
             <tr>
@@ -139,6 +128,8 @@
     </form>
 
 </center>
+
 </body>
+
 {% endblock %}
 </html>
