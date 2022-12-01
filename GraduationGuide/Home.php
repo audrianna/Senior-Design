@@ -26,6 +26,40 @@
 
     <h2> Year 1: </h2>
     <h4>Semester 1</h4>
+    <table>
+    <th> course subject</th>
+    <th> course number</th>
+    <th> course name</th>
+    <th> credits </th>
+    <th> grade </th>
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $database = "graduation guide";
+
+                    $connection = new mysqli($servername,$username, $password, $database);
+                    if ($connection-> connect_error){
+                        die("Connection failed: " . $connection->connect_error);
+                    }
+                    $sql = "SELECT * FROM comp_courses";
+                    $result = $connection->query($sql);
+
+                    if (!$result){
+                        die("invalid query: " . $connection->error);
+                    }
+
+                    while($row = $result->fetch_assoc()){
+                       echo " <tr>
+                           <td>COMP</td>
+                           <td>" . $row["cnumber"] . "</td>
+                           <td>" . $row["cname"] . "</td>
+                           <td>" . $row["credits"] . "</td>
+                           <td> <input> </td>
+                       </tr>";
+                    }
+                ?>
+    </table>
     <label for="freshman-class">ENGL100</label>
     <input type="checkbox" id="freshman-class" name="freshman-class">
     <br>
@@ -170,14 +204,23 @@
 
     <select id="Science-Elective" name="Science-Elective">
         <optgroup label="Science Electives">
-            <option value="BUED279"> BUED 279: Personal Finance (formerly BUED 379) </option>
-            <option value="ECON200"> ECON 200: Introductory Microeconomics</option>
-            <option value="ECON201"> ECON 201: Introductory Macroeconomics </option>
-            <option value="FCS135"> FCS 135: Food and Man’s Survival </option>
-            <option value="FCS181"> FCS 181: Social-Psychological Aspects of Dress</option>
-            <option value="FCS260"> FCS 260: Introduction to Human Development </option>
-            <option value="HIST103"> HIST 103: NC A&T State University History: A Legacy of
-                Social Activism and Aggie Pride (formerly HIST 203)</option>
+              <?php
+                  $servername = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $database = "graduation guide";
+
+                  $connection = new mysqli($servername,$username, $password, $database);
+                  if ($connection-> connect_error){
+                      die("Connection failed: " . $connection->connect_error);
+                  }
+                  $sql = "SELECT * FROM chem";
+                  $result = $connection->query($sql);
+
+              while($row=mysqli_fetch_array($result)){
+              ?>
+              <option Value = "<?php echo $row['cname'];?>"><?php echo $row['cname'], $row['cnumber'];?><?option>
+              <?php } ?>
             <option value=""> </option>
             <option value=""> </option>
             <option value=""> </option>
@@ -187,40 +230,17 @@
             <option value=""> </option>
 
             <br>
+<tr></tr>
+<td><input type="submit" name="submit" value="submit"> </td>
+<button type = "button"> Add Another Semester </button>
 
 
 </form>
 
 <br>
-<button> Add Another Semester </button>   <button> Submit </button>
 
 <table>
-    <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "graduation guide";
 
-        $connection = new mysqli(servername,username, $password, $database);
-        if ($connection-> connet_error){
-            die("Connection failed: " . $connection->connect_error);
-        }
-        $sql = "SELECT * FROM required_courses";
-        $result = $connection->query($sql);
-
-        if (!$result){
-            die("invalid query: " . $connection->error);
-        }
-        while($row = $result->fetch_assoc()){
-           echo " <tr>
-               <td>" . $row[subj] . "</td>
-               <td>" . $row[cnumber] . "</td>
-               <td>" . $row[cname] . "</td>
-               <td>" . $row[subj] . "</td>
-               <td>" . $row[credits] . "</td>
-           </tr>";
-        }
-    ?>
 </table>
 
 </body>

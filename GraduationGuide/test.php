@@ -31,3 +31,14 @@
 
     </body>
 </html>
+
+<tr>
+                <td>Classification:</td>
+                <td>
+
+                    <input type="radio" name="classification"> Freshman
+                    <input type="radio" name="classification"> Sophmore
+                    <input type="radio" name="classification"> Junior
+                    <input type="radio" name="classification"> Senior
+                </td>
+            </tr>
