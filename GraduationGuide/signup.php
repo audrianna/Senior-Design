@@ -79,4 +79,5 @@ $sql = "INSERT INTO student ( name, password, bannerid)
 echo "record saved";
 ?>
 </body>
+
 </html>
