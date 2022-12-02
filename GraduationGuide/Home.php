@@ -13,7 +13,7 @@
 
     <h2>Graduation Guide Class Check Off</h2>
 
-
+    <h3>Required Courses</h3>
     <p class="form-box">
 
 
@@ -23,6 +23,7 @@
         <th> course name</th>
         <th> credits </th>
         <th> grade </th>
+        <th> Status </th>
             <?php
                 $servername = "localhost";
                 $username = "root";
@@ -34,6 +35,8 @@
                     die("Connection failed: " . $connection->connect_error);
                 }
                 $sql = "SELECT * FROM comp_courses";
+                $sql1 = "SELECT * FROM completed_courses WHERE NOT NULL";
+                $result1 = $connection->query($sql1);
                 $result = $connection->query($sql);
 
                 if (!$result){
@@ -45,22 +48,31 @@
                        <td>" . $row["subj"]. "</td>
                        <td>" . $row["cnum"] . "</td>
                        <td>" . $row["cname"] . "</td>
-                       <td>" . $row["credits"] . "</td>"
+                       <td>" . $row["credits"] . "</td>";
+
+            ?>
+                    <form action = " " method = "GET">
+                               <td> <input type= "text" name = "grade" placeholder = "Enter Grade">
+                               <input type="submit" name="submit" value="submit"></td>
+                    </form>
+
+            <?php
+                $status = "NOT COMPLETED";
+                $grade = $_GET["grade"];
+                if ($grade === 'A'){
+                    $status = "PASSED";
+                }?>
+                 <td> <?php echo $status;?> </td>
+           <?php } ?>
 
 
-
-                ?>
-                <form action = " " method = "GET">
-                           <td> <input type= "text" name = "grade" placeholder = "Enter Grade"> </td>
-                           <td><input type="submit" name="submit" value="submit"></td></tr>
-                </form>
-                 <?php }?>
+                  </tr>
                      <?php
-                           $grade = $_GET['grade'];
 
-                           $sql = "INSERT INTO completed_courses (grade)
-                                     VALUES(?)";
-                           $sql_query = "INSERT completed_courses(subj, cnum, cname, prereq, credits) select subj, cnum, cname, prereq, credits from comp_courses";
+
+                           $sql = "INSERT completed_courses (grade, status)
+                                     VALUES(?, ?)";
+
 
 
 
@@ -70,21 +82,18 @@
 
                             }
 
-                                mysqli_stmt_bind_param($stmt, "s",
-                                                       $grade);
+                                mysqli_stmt_bind_param($stmt, "ss",
+                                                       $grade,
+                                                       $status);
                                mysqli_stmt_execute($stmt);
-                         if ($connection->query($sql_query) === true){
-
-
-                          }
-
-
 
 
                         ?>
-                        <td>  </td>
-                        </tr>
+                        <td>
+                         </td>
+
 </table>
+<h3>Electives</h3>
 <table>
 
             <tr><td> <label for="Science-Elective">Select the Approved COMP Elective taken:</label>
@@ -131,8 +140,10 @@
                                   ?>
                                     <option Value = "<?php echo $row['cname'];?>"><?php echo $row['cname'], $row['cnumber'];?> </option>
                               <?php  } ?>`
-                              <input type= "text" name = "grade" placeholder = "Enter Grade">
-                                            <input type="submit" name="submit" value="submit"></tr>
+                              <form method = "GET">
+                                 <input type= "text" name = "grade" placeholder = "Enter Grade">
+                                <input type="submit" name="submit" value="submit"></tr>
+                            </form>
          </tr>
 
             <tr><td><label for="Science-Elective">Select the Approved Statistics Elective taken:</label>

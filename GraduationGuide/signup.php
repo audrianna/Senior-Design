@@ -74,10 +74,15 @@ $sql = "INSERT INTO student ( name, password, bannerid)
                            $name,
                            $password,
                            $bannerid);
+
     mysqli_stmt_execute($stmt);
 
-echo "record saved";
+    if($grade === 'A'){
+     echo "passed";
+    }
+
 ?>
+
 </body>
 
 </html>
