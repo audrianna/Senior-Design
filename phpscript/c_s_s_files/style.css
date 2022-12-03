@@ -1,0 +1,38 @@
+body{
+    background: #006666;
+    color: #ffffff;
+}
+nav{
+    height: auto;
+    width: 100%;
+    background: #0099CC;
+    display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+h1{
+    font-size:65px;
+    font-family: Apple-Chancery;
+    text-align:center;
+    color:#ffffff;
+    margin-top: 7px;
+}
+
+/*FFOTER*/
+
+footer{
+    text-align:center;
+    font-size:22px;
+    background: black;
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-family:Apple-Chancery;
+    width:100%;
+    height:auto;
+    margin: 0;
+    margin-top:100px;
+}

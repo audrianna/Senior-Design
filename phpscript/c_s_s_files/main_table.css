@@ -1,0 +1,111 @@
+/* MAIN*/
+
+main table th{
+    color: #ffffff;
+}
+p b{
+    font-size: 50px;
+    font-family: Apple-Chancery;
+    color:red;
+}
+p i{
+    margin-left: 120px;
+}
+p{
+    text-align: left;
+    margin-left: 70px;
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    margin-top:180px;
+}
+.col{
+    background-color:#33CCCC;
+    color:#000000;
+    border-radius: 10px;
+    width:40%;
+    height:250px;
+    justify-content: center;
+    text-align:center;
+    font-size: 20px;
+    margin: 40px 0 40px 0;
+    border-width:95%;
+    transition: 0.5s;
+}
+#container{
+    margin: 0 auto;
+    width: 95%;
+    overflow: auto;
+    transition: 0.5s;
+}
+
+/* TABLE*/
+
+table input{
+    width: 86%;
+    height:30px;
+    background: white;
+    float:right;
+    transition: 0.5s;
+}
+.item{
+    font-weight: bold;
+    background-color: #33CCCC;
+    color:black;
+}
+.item td{
+    text-align:left;
+}
+table.gridtable{
+    margin: 0 auto;
+    width: 95%;
+    overflow: auto;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 14px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+    text-align: center;
+    transition: 0.5s;
+}
+table.gridtable th{
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #0099CC;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 17px;
+    transition: 0.5s;
+}
+table.gridtable td{
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+.breakrow{
+    font-weight: bold;
+    background-color: #33CCCC;
+    transition: 0.5s;
+}
+tr.breakrow{
+    font-size: 22px;
+    transition: 0.5s;
+}
+.datarow{
+    background-color: lightgray;
+    text-align: left;
+    display: none;
+    transition: 0.5s;
+}
+.datarow .sn{
+    text-align: center;
+}
+.breakrow{
+    font-size: 12px;
+}
