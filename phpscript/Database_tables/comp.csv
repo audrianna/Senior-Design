@@ -1,0 +1,27 @@
+subj,cnum,cname,prereq,credits,elective
+COMP,285,"Analysis of Algorithms",NULL,3,NULL
+COMP,365,"Artificial Intelligence & Machine Learning",NULL,3,NULL
+MATH,131,"Calculus I",NULL,4,NULL
+MATH,132,"Calculus II",NULL,4,NULL
+COMP,111,"COE Colloquium",NULL,1,NULL
+COMP,167,"Computer Program Design",NULL,3,NULL
+COMP,267,"Data Base Design",NULL,3,NULL
+COMP,280,"Data Structures",NULL,3,NULL
+MATH,341,"Diff. Equations",NULL,3,NULL
+COMP,180,"Discrete Structures",NULL,3,NULL
+COMP,121,"Freshmen Colloquium",NULL,1,NULL
+ENGL,100,"Ideas & Their Expressions I",NULL,3,0
+ENGL,101,"Ideas & Their Expressions II",NULL,3,NULL
+COMP,322,"Internet Systems",NULL,3,NULL
+COMP,163,"Introduction to Computer Programming",NULL,3,NULL
+COMP,300,"Junior Colloquium",NULL,1,NULL
+COMP,476,"Networked Comp. Sys.",NULL,3,NULL
+COMP,350,"Operating Systems",NULL,3,NULL
+COMP,360,"Programming Languages",NULL,3,NULL
+COMP,496,"Senior Project II (Capstone)",NULL,3,NULL
+COMP,390,"Soc. Implications of Computing (Ethics)",NULL,3,NULL
+COMP,410,"Software Engineering",NULL,3,1
+COMP,200,"Sophomore Colloquium",NULL,1,NULL
+SPCH,250,"Speech Fundamentals (Humanities/Fine Arts)",NULL,3,NULL
+COMP,385,"Theory of Computing",NULL,3,NULL
+COMP,331,"Writing Science & Tech.",NULL,3,NULL

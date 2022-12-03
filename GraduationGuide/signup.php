@@ -77,9 +77,7 @@ $sql = "INSERT INTO student ( name, password, bannerid)
 
     mysqli_stmt_execute($stmt);
 
-    if($grade === 'A'){
-     echo "passed";
-    }
+
 
 ?>
 
