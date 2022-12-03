@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Advisor Hotline
+	</title>
+</head>
+<style>
+	body, html {
+		height: 100%;
+		margin: 0;
+	}
+	.paragraph{
+		color: black;
+		font-size: 50px;
+		font-weight: bold;
+		text-align: center;
+	}
+	input[type=submit] {
+		width: 130px;
+		border-radius: 5px;
+		padding: 10px;
+		text-align: center;
+		font-size: 17px;
+		background-color: grey;
+		color: whitesmoke;
+	}
+	input[type=text] {
+		width: 70%;
+		border-color: blue;
+		padding: 10px 5px;
+		margin: 8px 3px;
+		box-sizing: border-box;
+	}
+	#subject {
+		border-color: rgb(9, 9, 26);
+		padding: 12px;
+		width: 70%;
+		margin: 8px 3px;
+	}
+	.button {
+		width: 150px;
+		border-radius: 5px;
+		padding: 10px;
+		text-align: center;
+		font-size: 17px;
+		background-color: grey;
+		color: whitesmoke;
+	}
+	.button:hover {
+		background-color: rgb(16, 16, 196);
+	}
+</style>
+<body>
+<p class="paragraph"> Welcome To The Advisor Hotline </p>
+<div class="container">
+	<form action="action_page.php">
+		<div class="row">
+			<div class="col-25">
+				<label for="fname"> Your Email</label>
+			</div>
+			<div class="col-75">
+				<input type="text" id="fname" name="firstname" >
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="lname">Advisors Email</label>
+			</div>
+			<div class="col-75">
+				<input type="text" id="lname" name="lastname" >
+			</div>
+		</div>
+</div>
+<div class="row">
+	<div class="col-25">
+		<label for="subject">Email Content</label>
+	</div>
+	<div class="col-75">
+<textarea id="subject" name="subject" placeholder="Write something.."
+		  style="height:200px"></textarea>
+	</div>
+</div>
+<br> <br> <br>
+<button class="button"> Send </button>
+</form>
+</div>
+</body>
+</html>
+

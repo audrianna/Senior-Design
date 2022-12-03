@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Registration
+	</title>
+</head>
+<style>
+	body, html {
+		height: 100%;
+		margin: 0;
+	}
+	.ncat {
+		background-image: url("ncat.png") ;
+		height:100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.paragraph {
+		color: black;
+		font-size: 50px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.button {
+		width: 150px;
+		border-radius: 5px;
+		padding: 10px;
+		text-align: center;
+		font-size: 17px;
+		background-color: grey;
+		color: whitesmoke;
+	}
+	.button:hover {
+		background-color: darkblue;
+		color: whitesmoke;
+	}
+	.center {
+		text-align: center;
+		margin-top: 200px;
+	}
+
+	input[type=text] {
+		border-color: black;
+		background-color:whitesmoke ;
+		width: 40%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+</style>
+<div class="ncat">
+	<body>
+	<p class="paragraph"> Welcome To The Graduation Guide</p>
+	<div class="center">
+		<form> </form>
+		<input type="text" id="aggieID" name="aggieID" placeholder="Enter Aggie ID">
+		<br><br>
+		<input type="text" id="username" name="username" placeholder="Enter Username">
+		<br><br>
+		<input type="text" id="password" name="password" placeholder="Enter Password">
+		<br> <br> <br> <br>
+		</form>
+		<button class="button" onclick="window.location.href='login.html';"> Signup
+		</button>
+	</div>
+	</body>
+</div>
+</html>
